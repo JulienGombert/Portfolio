@@ -1,0 +1,17 @@
+{% include "PartialFiles/_head.html.twig" %}
+    <body style="display: block;">
+
+        <header> {% include "PartialFiles/_header.html.twig" %}</header>
+
+        <main>
+            {% include "PartialFiles/_statichomepage.html.twig" %}
+            {% block main %}{% endblock main %}
+        </main>
+
+        <footer class="footerjg">
+            {% include "PartialFiles/_footer.html.twig" %}
+        </footer>
+
+        {% include "PartialFiles/_scripts.html.twig" %}
+    </body>
+</html>

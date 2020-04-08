@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Julien Gombert">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow" />
+
+    <title>{% block title %}Welcome!{% endblock %}</title>
+
+    {% block stylesheets %}{% endblock %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Orbitron:900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/36136c06eb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+</head>
+
+
+<body style="display: block;">
+
+    <!-- Burger menu -->
+    <div class="MobileNav" data-mobile-nav>
+        <div class="MobileNav-overlay" data-mobile-nav-overlay>    
+        </div>
+        <div class="MobileNav-inner">
+            <div class="MobileNav-trigger" data-mobile-nav-trigger>
+                <div class="MobileNav-trigger-inner"></div>
+            </div>
+            <ul class="MobileNav-nav" data-mobile-nav-list>
+                <li class="MobileNav-item" data-mobile-nav-item="1">
+                    <div class="MobileNav-item-title">
+                        <a href="#">A propos</a>
+                    </div>
+                </li>
+                <li class="MobileNav-item" data-mobile-nav-item="2">
+                    <div class="MobileNav-item-title">
+                        <a href="#">Réalisations</a>
+                    
+                </li>
+                <li class="MobileNav-item" data-mobile-nav-item="3">
+                    <div class="MobileNav-item-title">
+                        <a href="#">Services</a>
+                    </div>
+                </li>
+                <li class="MobileNav-item" data-mobile-nav-item="4">
+                    <div class="MobileNav-item-title">
+                        <a href="#">CV</a>
+                    </div>
+                </li>
+                <li class="MobileNav-item" data-mobile-nav-item="5">
+                    <div class="MobileNav-item-title">
+                        <a href="#">Contact</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+     </div>
+    <!-- End Burger menu -->
+    <!-- Menu      -->
+        <header class="Header" data-header>
+            <div class="Header-inner" data-header-nav>
+              <div class="logo">
+                <img src="{{asset('assets/img/logo_JG.png')}}" alt="">
+         
+              </div>
+              <nav class="Header-nav" data-nav>
+                <div class="Header-nav-item" data-nav-item="1">
+                  <a href="#">A propos</a>
+                </div>
+                <div class="Header-nav-item" data-nav-item="2">
+                  <a href="#">Réalisations</a>
+                </div>
+                <div class="Header-nav-item" data-nav-item="3">
+                  <a href="#">Services</a>
+                </div>
+                <div class="Header-nav-item" data-nav-item="4">
+                  <a href="{{ path('cv')}}">CV</a>
+                </div>
+                <div class="Header-nav-item" data-nav-item="5">
+                  <a href="#">Contact</a>
+                </div>
+              </nav>
+              <button class="MobileNav-trigger" data-mobile-nav-trigger>
+                <div class="MobileNav-trigger-inner"></div>
+              </button>
+            </div>
+        </header>
+        <!-- End menu -->
+
+        <main class="container-fluid">
+
+            <div class="row fullheight">
+                    <div class="col-md-6" style="align-self: center;">
+                        <h1>Je m'appelle Julien Gombert</h1>
+                        <h2>Développeur web freelance</h2>
+                        <p>Je développe des sites web de type blog, vitrine, institutionnel ou e-commerce</p>
+                    </div>
+                    <div class="col-md-6" style="text-align: center;">
+                        <img src="../public/assets/img/portraitJG_opt.jpg" alt="" class="rounded img-fluid">
+                    </div>                                
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="../public/assets/img/silver-imac-near-white-ceramic-kettle-205316-1536x1024.jpg" alt="" class="img-fluid">
+                </div> 
+            </div>
+
+            <div class="row row80">
+                <div class="col-12"><h1>Je suis Développeur Web Fullstack</h1></div>
+                <div class="col">
+                    <h2>Front-end</h2>
+                    <p>J'optimise l'ergonomie et la navigation d'un site web en utilisant notamment les langages dits d'expression HTML/CSS et utilise des effets visuels codés en JavaScript.</p>
+                </div>
+                <div class="col">
+                    <h2>Back-end</h2>
+                    <p>Je m'occupe de l'aspect technique du site et des fonctionnalités embarquées. Je gère également les accès au serveur et les communications avec les bases de données.</p>
+                </div>               
+            </div>
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="../public/assets/img/csarlat.jpeg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Clémentine Sarlat</h5>
+                        <p>Happy</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="../public/assets/img/csarlat.jpeg" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Clémentine Sarlat</h5>
+                        <p>Happy</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="../public/assets/img/csarlat.jpeg" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Clémentine Sarlat</h5>
+                        <p>Happy</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+
+              <div class="row row80">
+                <div class="col-12"><h1>Process</h1></div>
+                <div class="col JGcolblurb">
+                    <i class="fas fa-pencil-alt fa-2x"></i>
+                    <h2>Brief</h2>
+                    <p>J'optimise l'ergonomie et la navigation d'un site web en utilisant notamment les langages dits d'expression HTML/CSS et utilise des effets visuels codés en JavaScript.</p>
+                </div>
+                <div class="col JGcolblurb">
+                    <i class="fas fa-cogs fa-2x"></i>
+                    <h2>Réflexion</h2>
+                    <p>Je m'occupe de l'aspect technique du site et des fonctionnalités embarquées. Je gère également les accès au serveur et les communications avec les bases de données.</p>
+                </div>
+                <div class="col JGcolblurb">
+                    <i class="fas fa-laptop-code fa-2x"></i>
+                    <h2>Code</h2>
+                    <p>J'optimise l'ergonomie et la navigation d'un site web en utilisant notamment les langages dits d'expression HTML/CSS et utilise des effets visuels codés en JavaScript.</p>
+                </div>
+                <div class="col JGcolblurb">
+                    <i class="far fa-handshake fa-2x"></i>
+                    <h2>Livraison</h2>
+                    <p>Je m'occupe de l'aspect technique du site et des fonctionnalités embarquées. Je gère également les accès au serveur et les communications avec les bases de données.</p>
+                </div>               
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="../public/assets/img/silver-imac-near-white-ceramic-kettle-205316-1536x1024.jpg" alt="" class="img-fluid">
+                </div> 
+            </div>
+
+            <div class="row">
+                <ul class="social-icons" style="margin:0 auto;">
+                    <li><a class="github text-align" href="#" style="margin: 0 30px;"><i class="fab fa-github"></i></i></a></li>
+                    <li><a class="dribbble text-align" href="#" style="margin: 0 30px;"><i class="fab fa-dribbble"></i></a></li>
+                    <li><a class="linkedin text-align" href="#" style="margin: 0 30px;"><i class="fab fa-linkedin"></i></a></li>   
+                </ul>
+            </div>
+
+            {% block body %}{% endblock %}
+           
+        </main>
+        
+        <footer class="footerjg">
+                <div class=""><i class="far fa-copyright"></i>2020 Julien Gombert, Bordeaux</div>
+                <div class="">Mentions légales</div>
+        </footer>
+
+
+        {% block javascripts %}{% endblock %}
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="{{ asset('assets/js/jg.js') }}"></script>
+    </body>
+</html>
